@@ -415,8 +415,37 @@
             color: var(--text);
         }
 
+        /* ── Hamburger ── */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 4px;
+            line-height: 1;
+        }
+
         /* ── Responsive ── */
         @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            nav .nav-links {
+                display: none;
+                position: absolute;
+                top: 52px;
+                left: 0;
+                right: 0;
+                background: rgba(0,0,0,0.95);
+                -webkit-backdrop-filter: saturate(180%) blur(20px);
+                backdrop-filter: saturate(180%) blur(20px);
+                flex-direction: column;
+                padding: 16px 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            nav .nav-links.open { display: flex; }
+            nav .nav-links a { font-size: 1em; }
             .hero { padding: 120px 20px 60px; }
             .hero-icon { width: 96px; height: 96px; border-radius: 22px; }
             section { padding: 60px 20px; }
@@ -443,10 +472,11 @@
             <img src="images/icon.png" alt="NASound">
             NASound
         </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
         <div class="nav-links">
-            <a href="#features">Funciones</a>
-            <a href="#audio">Audio</a>
-            <a href="#sources">Fuentes</a>
+            <a href="#features" onclick="document.querySelector('.nav-links').classList.remove('open')">Funciones</a>
+            <a href="#audio" onclick="document.querySelector('.nav-links').classList.remove('open')">Audio</a>
+            <a href="#sources" onclick="document.querySelector('.nav-links').classList.remove('open')">Fuentes</a>
             <a href="soporte.html">Soporte</a>
             <a href="en/index.html">🇬🇧 EN</a>
         </div>
