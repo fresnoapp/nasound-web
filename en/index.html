@@ -68,14 +68,11 @@
         .screenshots { padding: 40px 24px 80px; overflow: hidden; }
         .screenshots-track { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
         .screenshot-frame {
-            width: 260px; flex-shrink: 0; border-radius: 28px; overflow: hidden;
-            border: 1.5px solid rgba(255,255,255,0.12);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(41,151,255,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+            width: 260px; flex-shrink: 0; overflow: hidden;
+            transition: transform 0.3s;
         }
         .screenshot-frame:hover {
             transform: translateY(-4px);
-            box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 50px rgba(41,151,255,0.15);
         }
         .screenshot-frame img { width: 100%; display: block; }
         .screenshot-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 32px; }
@@ -235,16 +232,16 @@
         <div class="screenshot-frame"><img src="../images/iphone-4.png" alt="iPhone - Albums"></div>
     </div>
     <div class="screenshots-track screenshot-group" data-tab="ipad">
-        <div class="screenshot-frame" style="width:260px;border-radius:20px;"><img src="../images/ipad-1.png" alt="iPad - Player"></div>
-        <div class="screenshot-frame" style="width:360px;border-radius:20px;"><img src="../images/ipad-2.png" alt="iPad - Library"></div>
-        <div class="screenshot-frame" style="width:360px;border-radius:20px;"><img src="../images/ipad-3.png" alt="iPad - Songs"></div>
-        <div class="screenshot-frame" style="width:260px;border-radius:20px;"><img src="../images/ipad-4.png" alt="iPad - Tag editor"></div>
+        <div class="screenshot-frame" style="width:260px;border-radius:0;"><img src="../images/ipad-1.png" alt="iPad - Player"></div>
+        <div class="screenshot-frame" style="width:360px;border-radius:16px;"><img src="../images/ipad-2.png" alt="iPad - Library"></div>
+        <div class="screenshot-frame" style="width:360px;border-radius:16px;"><img src="../images/ipad-3.png" alt="iPad - Songs"></div>
+        <div class="screenshot-frame" style="width:360px;border-radius:16px;"><img src="../images/ipad-4.png" alt="iPad - Tag editor"></div>
     </div>
     <div class="screenshots-track screenshot-group" data-tab="mac">
-        <div class="screenshot-frame" style="width:480px;border-radius:12px;"><img src="../images/mac-1.png" alt="Mac - Library"></div>
-        <div class="screenshot-frame" style="width:480px;border-radius:12px;"><img src="../images/mac-2.png" alt="Mac - Player"></div>
-        <div class="screenshot-frame" style="width:480px;border-radius:12px;"><img src="../images/mac-3.png" alt="Mac - Artist"></div>
-        <div class="screenshot-frame" style="width:480px;border-radius:12px;"><img src="../images/mac-4.png" alt="Mac - Albums"></div>
+        <div class="screenshot-frame" style="width:480px;border-radius:0;"><img src="../images/mac-1.png" alt="Mac - Library"></div>
+        <div class="screenshot-frame" style="width:480px;border-radius:0;"><img src="../images/mac-2.png" alt="Mac - Player"></div>
+        <div class="screenshot-frame" style="width:480px;border-radius:0;"><img src="../images/mac-3.png" alt="Mac - Artist"></div>
+        <div class="screenshot-frame" style="width:480px;border-radius:0;"><img src="../images/mac-4.png" alt="Mac - Albums"></div>
     </div>
 </div>
 
