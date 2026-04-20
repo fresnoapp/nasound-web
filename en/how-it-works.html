@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it works — NASound</title>
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f7;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { color: #86868b; font-size: 1.05em; margin-bottom: 48px; }
+        h2 { font-size: 1.5em; font-weight: 700; margin-top: 56px; margin-bottom: 8px; }
+        h3 { font-size: 1.15em; font-weight: 600; margin-top: 32px; margin-bottom: 8px; color: #f5f5f7; }
+        p { margin-bottom: 16px; color: #d1d1d6; }
+        a { color: #2997ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .intro-box {
+            background: #1d1d1f; border-radius: 16px; padding: 28px 32px;
+            margin-bottom: 48px; border-left: 4px solid #2997ff;
+        }
+        .intro-box p { color: #d1d1d6; margin-bottom: 0; font-size: 1.02em; }
+        .step { display: flex; gap: 32px; align-items: flex-start; margin: 32px 0; }
+        .step-img {
+            flex-shrink: 0; width: 220px; border-radius: 16px;
+            overflow: hidden; border: 1px solid rgba(255,255,255,0.08);
+        }
+        .step-img img { width: 100%; display: block; }
+        .step-content { flex: 1; padding-top: 8px; }
+        .step-number {
+            display: inline-block; background: #2997ff; color: #fff;
+            width: 28px; height: 28px; border-radius: 50%;
+            text-align: center; line-height: 28px; font-size: 0.85em;
+            font-weight: 700; margin-bottom: 8px;
+        }
+        .divider { border: none; border-top: 1px solid #1d1d1f; margin: 56px 0; }
+        .sync-card {
+            background: #1d1d1f; border-radius: 16px; padding: 28px 32px; margin: 24px 0;
+        }
+        .sync-card h4 { font-size: 1em; font-weight: 600; margin-bottom: 6px; color: #f5f5f7; }
+        .sync-card p { font-size: 0.92em; margin-bottom: 0; }
+        .sync-options {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0;
+        }
+        .sync-option {
+            background: #1d1d1f; border-radius: 12px; padding: 20px; text-align: center;
+        }
+        .sync-option .icon { font-size: 1.8em; margin-bottom: 8px; }
+        .sync-option h4 { font-size: 0.95em; font-weight: 600; margin-bottom: 4px; }
+        .sync-option p { font-size: 0.82em; margin-bottom: 0; }
+        .cta {
+            text-align: center; margin-top: 64px; padding-top: 48px;
+            border-top: 1px solid #1d1d1f;
+        }
+        .cta h2 { margin-top: 0; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #2997ff; color: #fff; padding: 14px 28px;
+            border-radius: 980px; text-decoration: none; font-size: 1em;
+            font-weight: 600; transition: background 0.2s;
+        }
+        .btn-primary:hover { background: #0077ed; text-decoration: none; }
+        .footer {
+            margin-top: 60px; padding-top: 24px;
+            border-top: 1px solid #1d1d1f; color: #86868b; font-size: 0.85em;
+        }
+        @media (max-width: 640px) {
+            .step { flex-direction: column; gap: 16px; }
+            .step-img { width: 100%; max-width: 280px; margin: 0 auto; }
+            .sync-options { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;">
+            <a href="index.html" style="color:#2997ff;text-decoration:none;font-size:0.95em;">&larr; NASound</a>
+            <a href="../como-funciona.html" style="color:#86868b;text-decoration:none;font-size:0.85em;">🇪🇸 ES</a>
+        </div>
+
+        <h1>How it works</h1>
+        <p class="subtitle">Set up your server once and enjoy all your music organized automatically.</p>
+
+        <!-- Intro -->
+        <div class="intro-box">
+            <p>NASound is not a file browser. It automatically indexes your music and organizes it by artists, albums and songs — like Spotify or Apple Music, but with your own library stored on your NAS or server.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-1.png" alt="Add account">
+            </div>
+            <div class="step-content">
+                <span class="step-number">1</span>
+                <h3>Choose your connection type</h3>
+                <p>NASound supports two server types: <strong>Synology NAS</strong> (with Audio Station) and <strong>WebDAV</strong> (compatible with any NAS or server). You can add as many connections as you need.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Synology -->
+        <h2>🗄️ Synology NAS</h2>
+        <p>If you have a Synology NAS with Audio Station installed, NASound integrates directly with its services.</p>
+
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-2.png" alt="Synology login">
+            </div>
+            <div class="step-content">
+                <span class="step-number">2</span>
+                <h3>Enter your credentials</h3>
+                <p>Type your Synology address, username and password. You can also use the <strong>"Search my network"</strong> button to detect it automatically on your local network. Two-factor authentication (2FA) is supported.</p>
+                <p>Your password is securely stored in Apple's Keychain.</p>
+            </div>
+        </div>
+
+        <div class="sync-card">
+            <h4>How does it work under the hood?</h4>
+            <p>NASound uses two Synology services simultaneously:<br>
+            <strong>Audio Station</strong> to index your music library (artists, albums, metadata and artwork).<br>
+            <strong>File Station</strong> for audio playback and incremental change synchronization.</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- WebDAV -->
+        <h2>🌐 WebDAV</h2>
+        <p>If you use a non-Synology NAS, your own server or any WebDAV-compatible service.</p>
+
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-3.png" alt="WebDAV login">
+            </div>
+            <div class="step-content">
+                <span class="step-number">2</span>
+                <h3>Connect your server</h3>
+                <p>Enter your WebDAV server URL, a descriptive name to identify the account, username and password. You can also search for servers on your local network automatically.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-4.png" alt="Folder selector">
+            </div>
+            <div class="step-content">
+                <span class="step-number">3</span>
+                <h3>Select your music folder</h3>
+                <p>Navigate to the root folder where you store your music and tap <strong>"Use this folder"</strong>. NASound will recursively scan all subfolders to find your audio files.</p>
+                <p>Unlike a file browser, you won't need to navigate through folders again — your music will be automatically organized by artists and albums using the metadata (ID3 tags) from each file.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Sync -->
+        <h2>🔄 Indexing and synchronization</h2>
+        <p>Once the connection is set up, NASound indexes all your music automatically.</p>
+
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-5.png" alt="Scanning songs">
+            </div>
+            <div class="step-content">
+                <h3>First sync</h3>
+                <p>NASound scans your server and extracts metadata from each file: title, artist, album, year, artwork, duration, format and more. This process only runs in full once.</p>
+                <p>Subsequent syncs are <strong>incremental</strong> — they only detect changes (new, deleted or modified songs), making them much faster.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-img" style="border-radius: 12px;">
+                <img src="../images/howto-6.png" alt="Sync options">
+            </div>
+            <div class="step-content">
+                <h3>Full control over synchronization</h3>
+                <p>From settings you can configure how and when your library syncs:</p>
+            </div>
+        </div>
+
+        <div class="sync-options">
+            <div class="sync-option">
+                <div class="icon">🔄</div>
+                <h4>Automatic</h4>
+                <p>Syncs when you open the app. You can disable it if you prefer manual control.</p>
+            </div>
+            <div class="sync-option">
+                <div class="icon">🔃</div>
+                <h4>Update</h4>
+                <p>Only looks for changes since the last sync. Fast and efficient.</p>
+            </div>
+            <div class="sync-option">
+                <div class="icon">🔁</div>
+                <h4>Rebuild</h4>
+                <p>Re-scans the entire library from scratch. Useful if something didn't sync correctly.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Result -->
+        <h2>🎵 Your library, organized</h2>
+
+        <div class="step">
+            <div class="step-img">
+                <img src="../images/howto-7.png" alt="Organized library">
+            </div>
+            <div class="step-content">
+                <h3>Ready to listen</h3>
+                <p>Your music appears organized by artists, albums, songs and genres — regardless of how the folders are structured on your server.</p>
+                <p>If you add new music to your NAS, NASound will detect it automatically on the next sync. No extra setup needed.</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta">
+            <h2>Ready to try it?</h2>
+            <p>Available on TestFlight for iPhone, iPad and Mac.</p>
+            <a href="https://testflight.apple.com/join/zebKhuYc" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Try on TestFlight
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 fresnoapp. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

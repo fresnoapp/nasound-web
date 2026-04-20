@@ -51,7 +51,7 @@
 
         <div class="faq-item">
             <h3>How do I connect my Synology NAS?</h3>
-            <p>Go to Settings in the app, tap "Add account" and select Synology. Enter your server address, username and password. The app will connect to Audio Station and File Station automatically.</p>
+            <p>Go to Settings in the app, tap "Add account" and select Synology. Enter your server address, username and password. The app will connect to Audio Station and File Station automatically. See <a href="how-it-works.html">how it works</a> for more details.</p>
         </div>
 
         <div class="faq-item">
@@ -72,6 +72,40 @@
         <div class="faq-item">
             <h3>Is my data safe?</h3>
             <p>Yes. Your credentials are stored in Apple's Keychain. The app only communicates with your own servers and does not send data to third parties. See our <a href="privacy.html">privacy policy</a> for more information.</p>
+        </div>
+
+        <h2>Connection issues</h2>
+
+        <div class="faq-item">
+            <h3>Why can't I connect using my local IP (192.168.x.x)?</h3>
+            <p>If you use HTTPS with your NAS's local IP (e.g. <code>https://192.168.1.100:5001</code>), the connection will fail because the SSL certificate on your NAS is linked to your DDNS domain (e.g. <code>yournas.synology.me</code>), not to the IP address.</p>
+            <p><strong>Solution:</strong> Use your DDNS domain instead of the local IP. For example: <code>https://yournas.synology.me:5001</code>. This works both inside and outside your local network.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why am I getting a certificate error?</h3>
+            <p>iOS requires HTTPS connections to use a valid SSL certificate issued by a recognized certificate authority. Self-signed certificates that come by default on many NAS devices are not accepted.</p>
+            <p><strong>Solution:</strong> Install a free <strong>Let's Encrypt</strong> certificate on your NAS. On Synology you can do this from Control Panel → Security → Certificate. It's free and renews automatically.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why is the connection refused or not responding?</h3>
+            <p>This can happen for several reasons:</p>
+            <p>• <strong>Wrong port:</strong> Synology uses port <code>5001</code> for HTTPS and <code>5000</code> for HTTP. Make sure you're using the correct port.</p>
+            <p>• <strong>Server unreachable:</strong> Check that your NAS is powered on and accessible from your device. Try accessing it from your phone's browser.</p>
+            <p>• <strong>Firewall or router:</strong> If you're outside your local network, make sure port forwarding is configured on your router.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why does iOS block my HTTP connection?</h3>
+            <p>iOS blocks all HTTP (unencrypted) connections for security. NASound requires HTTPS to protect your credentials during transmission.</p>
+            <p><strong>Solution:</strong> Enable HTTPS on your NAS or WebDAV server and install a valid SSL certificate (Let's Encrypt is free).</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does the connection work on WiFi but not on mobile data?</h3>
+            <p>When on WiFi, your device can access the NAS directly on your local network. On mobile data you need your NAS to be accessible from the internet.</p>
+            <p><strong>Solution:</strong> Set up a DDNS domain (like QuickConnect on Synology or a free DDNS) and make sure port forwarding is active on your router.</p>
         </div>
 
         <div class="footer">
