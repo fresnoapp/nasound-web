@@ -74,13 +74,13 @@
         </div>
 
         <h1>Política de Privacidad</h1>
-        <p class="updated">Última actualización: 15 de febrero de 2026</p>
+        <p class="updated">Última actualización: 5 de septiembre de 2026</p>
 
         <h2>1. Introducción</h2>
-        <p>NASound es un reproductor de música que se conecta a servidores NAS Synology, servidores WebDAV y a la biblioteca local del dispositivo. Esta política describe cómo la app gestiona tu información.</p>
+        <p>NASound es un reproductor de música que se conecta a servidores NAS Synology, servidores Navidrome y a la biblioteca local del dispositivo, e incluye radio por internet y podcasts. Esta política describe cómo la app gestiona tu información.</p>
 
         <h2>2. Datos que recopilamos</h2>
-        <p>NASound no recopila datos personales. La app no utiliza servicios de análisis, publicidad ni seguimiento de terceros.</p>
+        <p>NASound no recopila datos personales. La app no utiliza servicios de análisis, publicidad ni seguimiento de terceros, y no tiene cuentas de usuario ni servidores propios.</p>
 
         <h2>3. Datos almacenados en tu dispositivo</h2>
         <p>La app almacena los siguientes datos localmente en tu dispositivo:</p>
@@ -90,11 +90,22 @@
             <li>Preferencias de la app (ecualizador, crossfade, ajustes de reproducción)</li>
             <li>Playlists y canciones favoritas</li>
             <li>Canciones descargadas para uso offline</li>
+            <li>Tus emisoras de radio, sus grabaciones y programaciones, y las canciones guardadas desde la radio</li>
+            <li>Los podcasts que sigues y los episodios descargados</li>
+            <li>Las letras que añadas a tus archivos y las cachés de logos y carátulas</li>
         </ul>
         <p>Estos datos permanecen en tu dispositivo y no se envían a ningún servidor externo.</p>
 
         <h2>4. Comunicaciones de red</h2>
-        <p>NASound únicamente se comunica con los servidores que tú configuras (tu NAS Synology o tu servidor WebDAV). No se realizan conexiones a servidores de terceros.</p>
+        <p>NASound se comunica con los servidores que tú configuras (tu NAS Synology o tu servidor Navidrome). Además, para las funciones de radio y podcasts, realiza estas conexiones:</p>
+        <ul>
+            <li><strong>Directorio de emisoras:</strong> las búsquedas y listas de emisoras se consultan al directorio comunitario radio-browser.info. Al reproducir una emisora del directorio se le envía un aviso anónimo con el identificador de la emisora para sus estadísticas de popularidad.</li>
+            <li><strong>Emisoras:</strong> el audio se recibe directamente del servidor de cada emisora que elijas, igual que en un navegador. Para mostrar su logo, la app puede visitar la web de la emisora.</li>
+            <li><strong>Podcasts:</strong> la búsqueda y las listas de podcasts se consultan al catálogo de Apple; los episodios se obtienen del servidor de cada podcast que sigues.</li>
+            <li><strong>Carátulas de las canciones en la radio:</strong> cuando la emisora emite el título de la canción que suena, la app lo consulta en el catálogo de Apple para mostrar su carátula. Esta función es opcional y puede desactivarse en Ajustes › Radio; en ese caso se muestra el logo de la emisora.</li>
+            <li><strong>Letras:</strong> el asistente de letras abre la web lrclib.net dentro de la app únicamente cuando tú lo solicitas. La app no consulta letras automáticamente.</li>
+        </ul>
+        <p>En ninguna de estas comunicaciones se envía tu identidad, tus credenciales ni datos de tu biblioteca: solo lo necesario para cada consulta (el texto buscado, el título de una canción o la dirección de una emisora). Como en cualquier conexión de internet, esos servicios ven la dirección IP del dispositivo.</p>
 
         <h2>5. iCloud</h2>
         <p>Si activas la función de copia de seguridad, la app puede almacenar backups en tu iCloud Drive personal. Estos backups contienen configuraciones de cuenta y metadatos de tu biblioteca. No se suben archivos de audio a iCloud.</p>
@@ -102,10 +113,11 @@
         <h2>6. Permisos del dispositivo</h2>
         <ul>
             <li><strong>Biblioteca de fotos:</strong> Opcional, solo para guardar carátulas de álbumes si tú lo solicitas.</li>
-            <li><strong>Audio en segundo plano:</strong> Para que la música siga reproduciéndose con la pantalla bloqueada.</li>
-            <li><strong>Red:</strong> Para conectar con tus servidores Synology o WebDAV.</li>
+            <li><strong>Audio en segundo plano:</strong> Para que la música y la radio sigan reproduciéndose con la pantalla bloqueada, y para las grabaciones de radio programadas.</li>
+            <li><strong>Notificaciones:</strong> Opcional, para avisarte de episodios nuevos de tus podcasts y de las grabaciones programadas.</li>
+            <li><strong>Red:</strong> Para conectar con tus servidores y con las emisoras y podcasts que elijas.</li>
         </ul>
-        <p>La app no accede al micrófono, cámara, ubicación, contactos ni calendario.</p>
+        <p>La app no accede al micrófono, cámara, ubicación, contactos ni calendario. La zona de las emisoras locales la eliges tú manualmente; no se usa la ubicación del dispositivo.</p>
 
         <h2>7. Seguimiento y publicidad</h2>
         <p>NASound no contiene publicidad, no utiliza identificadores de seguimiento y no participa en redes publicitarias. No se implementa App Tracking Transparency porque no existe ningún tipo de seguimiento.</p>

@@ -33,13 +33,13 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: February 15, 2026</p>
+        <p class="updated">Last updated: September 5, 2026</p>
 
         <h2>1. Introduction</h2>
-        <p>NASound is a music player that connects to Synology NAS servers, WebDAV servers and the device's local library. This policy describes how the app handles your information.</p>
+        <p>NASound is a music player that connects to Synology NAS servers, Navidrome servers and the device's local library, and includes internet radio and podcasts. This policy describes how the app handles your information.</p>
 
         <h2>2. Data we collect</h2>
-        <p>NASound does not collect personal data. The app does not use analytics services, advertising or third-party tracking.</p>
+        <p>NASound does not collect personal data. The app does not use analytics services, advertising or third-party tracking, and has no user accounts or servers of its own.</p>
 
         <h2>3. Data stored on your device</h2>
         <p>The app stores the following data locally on your device:</p>
@@ -49,11 +49,22 @@
             <li>App preferences (equalizer, crossfade, playback settings)</li>
             <li>Playlists and favorite songs</li>
             <li>Downloaded songs for offline use</li>
+            <li>Your radio stations, their recordings and schedules, and songs saved from the radio</li>
+            <li>The podcasts you follow and downloaded episodes</li>
+            <li>Lyrics you add to your files, and the logo and artwork caches</li>
         </ul>
         <p>This data stays on your device and is not sent to any external server.</p>
 
         <h2>4. Network communications</h2>
-        <p>NASound only communicates with the servers you configure (your Synology NAS or WebDAV server). No connections are made to third-party servers.</p>
+        <p>NASound communicates with the servers you configure (your Synology NAS or your Navidrome server). In addition, for the radio and podcast features, it makes these connections:</p>
+        <ul>
+            <li><strong>Station directory:</strong> station searches and lists are queried from the community directory radio-browser.info. When you play a station from the directory, an anonymous notice with the station identifier is sent for its popularity statistics.</li>
+            <li><strong>Stations:</strong> audio is received directly from the server of each station you choose, just like in a browser. To show its logo, the app may visit the station's website.</li>
+            <li><strong>Podcasts:</strong> podcast search and charts are queried from Apple's catalog; episodes are fetched from the server of each podcast you follow.</li>
+            <li><strong>Song artwork on the radio:</strong> when a station broadcasts the title of the song playing, the app looks it up in Apple's catalog to show its artwork. This feature is optional and can be turned off in Settings › Radio; the station logo is shown instead.</li>
+            <li><strong>Lyrics:</strong> the lyrics assistant opens the website lrclib.net inside the app only when you ask for it. The app does not look up lyrics automatically.</li>
+        </ul>
+        <p>None of these communications include your identity, your credentials or your library data: only what each query needs (the text you search for, a song title or a station address). As with any internet connection, those services see the device's IP address.</p>
 
         <h2>5. iCloud</h2>
         <p>If you enable the backup feature, the app may store backups in your personal iCloud Drive. These backups contain account settings and library metadata. No audio files are uploaded to iCloud.</p>
@@ -61,10 +72,11 @@
         <h2>6. Device permissions</h2>
         <ul>
             <li><strong>Photo Library:</strong> Optional, only to save album artwork if you request it.</li>
-            <li><strong>Background Audio:</strong> So music continues playing with the screen locked.</li>
-            <li><strong>Network:</strong> To connect to your Synology or WebDAV servers.</li>
+            <li><strong>Background Audio:</strong> So music and radio keep playing with the screen locked, and for scheduled radio recordings.</li>
+            <li><strong>Notifications:</strong> Optional, to let you know about new episodes of your podcasts and about scheduled recordings.</li>
+            <li><strong>Network:</strong> To connect to your servers and to the stations and podcasts you choose.</li>
         </ul>
-        <p>The app does not access the microphone, camera, location, contacts or calendar.</p>
+        <p>The app does not access the microphone, camera, location, contacts or calendar. You pick the area for local stations manually; the device's location is not used.</p>
 
         <h2>7. Tracking and advertising</h2>
         <p>NASound contains no advertising, does not use tracking identifiers and does not participate in ad networks. App Tracking Transparency is not implemented because there is no tracking of any kind.</p>
